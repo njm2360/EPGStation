@@ -209,6 +209,6 @@ export default class OnAirSelectStreamState implements IOnAirSelectStreamState {
             return null;
         }
 
-        return `/api/streams/live/${channel.id.toString(10)}/m2ts/playlist?mode=${this.selectedStreamConfig}`;
+        return location.host + Util.getSubDirectory() + `/api/streams/live/${channel.id.toString(10)}/m2ts/playlist?mode=${this.selectedStreamConfig}`;
     }
 }
